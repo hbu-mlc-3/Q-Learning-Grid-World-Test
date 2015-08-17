@@ -22,7 +22,7 @@ t = 1;
 gamma = Gamma();
 
 %index of penalized state
-p = n-w;
+p = 7;
 
 
 %generating the Reward vector R and the Q matrix, as a matrix of zeros
@@ -30,8 +30,6 @@ R = GenerateReward(n,p);
 Q = zeros( (height()*width()) , NActions );
 
 clc;
-
-Visualize(s , w , h , R);
 
 while(a != -1)
 	

@@ -1,11 +1,11 @@
 function r = GenerateReward(n , p)
 %a function that generates the reward vector, with rewards for every state.
 %n is the number of states and so the dimension of the returned vector r.
-%p is the index of the penalized state.
-	r = zeros(n,1);
+%p is the index/vector of indexes of the penalized state/states.
+	r = ones(n,1)*commonr();
 
 	%the last state is the one with positive reward
-	r(n) = 1;
-	r(p) = -1;
+	r(n) = 2;
+	r(p) = -2;
 
 end;
