@@ -1,10 +1,12 @@
 A simple Markovian Grid world ruled by a Stochastic-like model.
 
 AGENT:
+
 	The agent always starts from the state 1 and always act following its
 	Policy and updating the Q values.
 
 WORLD:
+
 	The dimension of the grid world can be easly changed in the files "height.m"
 	and "width.m", which are functions that returns the width and the height of
 	the grid, in the folder "Values".
