@@ -14,11 +14,11 @@ function sp = EndingS(s,a)
 	%sp is the ending state
 	sp = s;
 	
-	%0 is the action "left", before performed, It 
-	%checks that the state is not in the left border	
-	if( a==0 && rem((s-1),w)!=0 )
+	%0 is the action "right", before performed, It 
+	%checks that the state is not in the right border	
+	if( a==0 && rem(s,w)!=0 )
 	
-		sp = sp - 1;
+		sp = sp + 1;
 
 	%0 is the action "up", before performed, It 
 	%checks that the state is not in the top border
@@ -26,11 +26,11 @@ function sp = EndingS(s,a)
 
 		sp = sp + w;
 	
-	%0 is the action "right", before performed, It 
-	%checks that the state is not in the right border
-	elseif( a==2 && rem(s,w)!=0 )
+	%0 is the action "left", before performed, It 
+	%checks that the state is not in the left border
+	elseif( a==2 && rem((s-1),w)!=0 )
 
-		sp = sp + 1;
+		sp = sp - 1;
 
 	%0 is the action "down", before performed, It 
 	%checks that the state is not in the down border

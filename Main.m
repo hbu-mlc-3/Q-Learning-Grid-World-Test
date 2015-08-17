@@ -35,8 +35,8 @@ Visualize(s , w , h , R);
 
 while(a != -1)
 	
-
-	a  = input("Insert the action to be executed (-1 to exit , L=0 U=1 R=2 D=3) \n\n" );
+	%choose a following the policy
+	a  = Policy(s,Q);
 	
 	clc;
 
@@ -75,4 +75,6 @@ while(a != -1)
 	end;
 
 	Visualize(s , w , h , R);
+
+	pause();
 end;
